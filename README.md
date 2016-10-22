@@ -1,2 +1,2 @@
 # Vue.js-ToDo-App
-ToDo App with Vue.js
+To do app with Vue.js
