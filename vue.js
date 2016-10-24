@@ -1,19 +1,23 @@
 new Vue({
-	el: "#todo",
+  el: "#todo",
   data: {
-  	newTask: "",
+    newTask: "",
     taskList: []
   },
   methods: {
-  	addTask: function() {
-    	var task = this.newTask.trim();
+    addTask: function() {
+      var task = this.newTask.trim();
       if (task) {
-      	this.taskList.push({
-        	text: task,
+        this.taskList.push({
+          text: task,
           checked: false
         });
         this.newTask = "";
       }
+    },
+    removeTask: function(task) {
+    	var index = this.taskList.indexOf(task);
+      this.taskList.splice(index, 1);
     }
   }
 });
