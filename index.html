@@ -4,13 +4,13 @@
     <input type="text" placeholder="What do you want to do?" autofocus class="text-input" v-model="newTask" v-on:keyup.enter="addTask">
     <button>Clear List</button>
   </section>
-  
+
   <ul class="list">
     <li v-for="task in taskList">
       <input type="checkbox" class="checkbox">
       <label for="checkbox">{{ task.text }}</label>
-      <button class="delete">X</button>
+      <button class="delete" v-on:click="removeTask(task)">X</button>
     </li>
   </ul>
- <pre>{{ $data }}</pre>
+  <pre>{{ $data }}</pre>
 </div>
