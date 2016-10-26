@@ -17,7 +17,10 @@ new Vue({
     },
     removeTask: function(task) {
     	var index = this.taskList.indexOf(task);
-      this.taskList.splice(index, 1);
+    	this.taskList.splice(index, 1);
+    },
+    clearList: function() {
+      this.taskList = [];
     }
   }
 });
