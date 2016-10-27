@@ -7,10 +7,9 @@
 
   <ul class="list">
     <li v-for="task in taskList">
-      <input type="checkbox" class="checkbox">
+      <input type="checkbox" class="checkbox" v-model="task.checked">
       <label for="checkbox">{{ task.text }}</label>
       <button class="delete" v-on:click="removeTask(task)">X</button>
     </li>
   </ul>
   <pre>{{ $data }}</pre>
-</div>
